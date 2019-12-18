@@ -22,16 +22,16 @@ import { adapterFactory } from './adapters/adapter-factory';
 })
 export class IonAffix implements AfterViewInit, OnDestroy {
 
-    @Input('content') content;
+    @Input('content') content:any;
     @Output() onSticky = new EventEmitter<IonAffixEvent>();
-    clone;
-    scrollSubscription;
+    clone:any;
+    scrollSubscription:any;
     // header that should be made sticky
-    headerElement;
+    headerElement:any;
     // direct parent of header (can be ion-list, ion-card etc.)
-    containerElement;
+    containerElement:any;
     // the element that scrolls (i.e., ion-content or ion-scroll)
-    scrollContainer: IonAffixContainer;
+    scrollContainer:any;
 
     constructor(private element: ElementRef, private renderer: Renderer2) {
     }
@@ -61,7 +61,7 @@ export class IonAffix implements AfterViewInit, OnDestroy {
         this.scrollSubscription = this.scrollContainer.onScroll().subscribe(onScroll);
     }
 
-    private updateSticky(scrollTop, containerTop, containerBottom, scrollClientTop, headerHeight, left, right, downwards) {
+    private updateSticky(scrollTop:any, containerTop:any, containerBottom:any, scrollClientTop:any, headerHeight:any, left:any, right:any, downwards:any) {
         // check if scrollTop is within list boundaries
         if (scrollTop > 0 && scrollTop >= containerTop && scrollTop <= containerBottom) {
             if (!this.clone) {
@@ -104,7 +104,7 @@ export class IonAffix implements AfterViewInit, OnDestroy {
         }
     }
 
-    private applyStyles(left, right) {
+    private applyStyles(left:any, right:any) {
         this.renderer.setStyle(this.headerElement, 'right', `${right}px`);
         this.renderer.setStyle(this.headerElement, 'left', `${left}px`);
         this.renderer.setStyle(this.headerElement, 'transition', 'left 0.1s ease-out, right 0.1s ease-out');

@@ -9,7 +9,7 @@ import { Observable, merge } from 'rxjs';
  */
 export class ContentAdapter implements IonAffixContainer {
 
-    constructor(public content: IonContent) {
+    constructor(public content: any) {
     }
 
     onScroll(): Observable<any> {

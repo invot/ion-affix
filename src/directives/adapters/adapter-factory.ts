@@ -1,7 +1,7 @@
 import { IonContent } from '@ionic/angular';
 import { ContentAdapter } from './content-adapter';
 
-export function adapterFactory (container) {
+export function adapterFactory (container:any) {
     if (container instanceof IonContent) {
         return new ContentAdapter(container);
     } 
