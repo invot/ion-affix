@@ -1,5 +1,5 @@
 import { IonAffixContainer } from '../ion-affix-container';
-import { Scroll } from 'ionic-angular';
+// import { Scroll } from 'ionic-angular';
 import { Observable, fromEvent } from 'rxjs';
 import { map, pairwise, tap } from 'rxjs/operators';
 
@@ -12,7 +12,7 @@ export class ScrollAdapter implements IonAffixContainer {
 
     scrollingDown = false;
 
-    constructor(public scroll: Scroll) {
+    constructor(public scroll: any) {
     }
 
     onScroll(): Observable<any> {
