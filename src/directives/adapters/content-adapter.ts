@@ -1,5 +1,5 @@
 import { IonAffixContainer } from '../ion-affix-container';
-import { Content } from 'ionic-angular';
+import { IonContent } from '@ionic/angular';
 import { Observable, merge } from 'rxjs';
 
 /**
@@ -9,7 +9,7 @@ import { Observable, merge } from 'rxjs';
  */
 export class ContentAdapter implements IonAffixContainer {
 
-    constructor(public content: Content) {
+    constructor(public content: IonContent) {
     }
 
     onScroll(): Observable<any> {
